@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+.carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  z-index: 1; 
+}
+.carousel-text h1 {
+  font-family: 'Dancing Script', cursive !important;
+  font-weight: bold;
+  font-size: 100px;
+}
+.carousel-text p{
+  font-size: 20px;
+}
+#carouselExampleControls{
+  margin-top: 100px;
+}
+#explore{
+  color: white;
+  background: rgb(0, 255, 208);
+  padding: 30px;
+  font-weight: bold;
+  border-radius: 4px;
+  justify-content: center;
+  text-align: center;
+}
+.carousel-item img {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  width: 100%;         
+  height: auto;      
+  max-height: 90vh;    
+  object-fit: cover;   
+}
+.carousel-item.active img {
+  transform: scale(1.05); 
+  opacity: 1;
+}
+.carousel-item img {
+  transform: scale(0.95); 
+  opacity: 0.8;
+}
+.searchbtn{
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 10PX 20PX;
+  width: 300px;
+  border-radius: 5PX;
+}
+.searchbtn input{
+  padding: 6PX;
+  background: black;
+  border: 0;
+  outline: 0;
+  color: #ffffff;
+  font-size: 18PX;
+  max-width: 200PX;
+
+}
+.searchbtn button{
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #000000;
+  font-size: 18PX;
+  max-width: 200PX;
+  cursor: pointer;
+}
+.searchbtn input::placeholder{
+  color: #ffffff;
+}
+.btn3{
+  border: 10px;
+  border-color: #fd1212;
+}
+.navbar2{
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  background: #01011c;
+  padding:  50px;
+  box-sizing: border-box;
+  color: white;
+}
+#Button{
+  color: white;
+  background: red;
+  padding: 10px;
+}
+.navbar2 input{
+  background-color: #0a0e17; 
+  color: #b0b0b0;           
+  border: 1px solid #444;   
+  border-radius: 6px;       
+  padding: 10px 12px;       
+  width: 250px;            
+  margin: 20px;
+  font-size: 16px;
+}
+#drop{
+  background-color: #080b12; 
+  color: #b0b0b0;           
+  border: 1px solid #444;   
+  border-radius: 6px;       
+  padding: 10px 10px;       
+  width: 250px;            
+  margin: 20px;
+  font-size: 16px;
+
+}
+.para{
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+.para p {
+  position: static; 
+  width: 500px;
+  margin: 0 auto;
+  color: gray;
+  text-align: center;
+}
+.para h1{
+  
+  margin-bottom: 10px;
+}
+.Card{
+  position: relative;
+  left: 100px;
+  margin: 20px;
+  width: 340px;
+  transition: transform 0.5s ease;  
+}
+.Card:hover{
+    transform: scale(1.05);
+}
+#btn3{
+  width: 100px;
+  height: 30px;
+  position: relative;
+  top: 240px;
+  left: 10px;
+  font-size: 10px;
+  font-weight: bolder;
+  border-radius: 40px;
+  margin-left: 5px;
+}
+#title{
+  color: white;
+  margin-top: 240px;
+  
+}
+#text{
+  display: flex;
+}
+.background {
+    background: 
+        linear-gradient( rgba(10, 15, 25, 0.774)),
+        url('https://preview.colorlib.com/theme/travelo/img/banner/newsletter.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    margin-top: 80px;
+    
+
+}
+#newsletter{
+  height: 100px;
+}
+#subscribe{
+  /* width: 500px; */
+  position: relative;
+  left: 100px;
+
+}
+#Card{
+  position: relative;
+  display: flex;
+  left: 100px;
+  margin: 20px;
+  width: 340px;
+  transition: transform 0.5s ease;  
+}
+#Card Img{
+    width: 339px;
+    position: relative;
+    right: 12px;
+    border-radius: 4px 4px 0 0;
+}
+#Card:hover{
+    transform: scale(1.05);
+}
+#fonttext{
+    padding: 20px;
+}
+#buttonprice{
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    justify-content: center;
+    position: relative;
+    bottom: 420px;
+    right: 50px;
+    color: white;
+}
+#moreplace{
+  color: white;
+  background: rgb(239, 31, 31);
+  padding: 10px;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  left: 500px;
+}
+.video-section {
+  background: url("https://www.hdwallpapers.in/download/tree_water_reflection_lake_nature_mountains_wallpaper_blue_sky_silhouette_background_4k_hd_nature-HD.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* flex-direction: column; */
+  color: white;
+  /* text-align: center; */
+  position: relative;
+}
+.video-title {
+  font-size: 200px;
+  font-family: "Brush Script MT", cursive; 
+  margin-bottom: 30px;
+}
+.play-button {
+  background: #1abc9c;   
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 85px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+  left: 599px;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(26, 188, 156, 0.6);
+    transform: scale(1);
+  }
+  70% {
+    box-shadow: 0 0 0 30px rgba(3, 140, 140, 0);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transform: scale(1);
+  }
+}
+.stats{
+  text-align: center;
+  margin-top: 200px;
+  width: 200px;
+  justify-content: center;
+}
+.logo{
+  margin-bottom: 30px;
+
+}
+.stats p{
+  color: gray;
+ 
+}
+#slide {
+  padding: 300px;
+}
+#slide img{
+    height: 100px;
+    width: 100px;
+    background: white;
+}
+/* #recenttrip{
+  text-align: center;
+  margin-bottom: 100px;
+}
+#tripdate{
+  color: rgb(0, 0, 0);
+  position: relative;
+  top: 300px;
+}
+#triptext{
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  position: relative;
+  width: 400px;
+  justify-content: start;
+  top: 300px;
+} */
+
+#recenttrips{
+  width: 350px;
+  height: 250px;
+  display: flex;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#trips{
+  font-family: sans-serif;
+  cursor: pointer;
+  /* margin-bottom: 50px; */
+}
+#recenttrip{
+  text-align: center;
+  margin-bottom: 100px;
+}
+#footer{
+  background-color: #01011c;
+  padding-top: 100px;
+  padding-bottom: 300px;
+  
+}

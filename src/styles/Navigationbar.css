@@ -1,0 +1,164 @@
+html, body {
+  max-width: 100%;
+  
+}
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.navbar1 img{
+  margin: 0%;
+  padding: 0%;
+
+}
+
+#navbar1{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+.navbar1{
+  background-color: #d61e1e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fafafa;
+  padding: 15px 7%;
+  box-sizing: border-box;
+  width: 1600px;
+}
+.navbar1 h2{
+  font-style: italic;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.navbar1 a:hover {
+  background-color: #0b0101;
+  color: white;
+  
+}
+.navbar1 a{
+  text-decoration: none;
+  color: rgb(194, 17, 17);
+}
+.btn-animate:hover {
+    transform: scale(0.8);
+    background-color: #035e09; 
+    color: rgb(255, 255, 255);
+    transition:  0.3s;
+}
+input{
+  padding: 10px;
+}
+.search input{
+  align-items: end;
+  
+}
+
+.c2{
+  transition: 0.4s;
+  
+}
+.c2.dark{
+  background: #000000;
+  color: white;
+}
+.logo {
+  width: 300px;
+ 
+  cursor: pointer;
+}
+ul{
+  flex: 1;
+  list-style: none;
+  text-align: start;
+}
+ul li{
+  display: inline-block;
+  margin: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.toggle_icon{
+  width: 50px;
+  cursor: pointer;
+  margin-left: 40px; 
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  background: #000000;
+  padding: 10PX 20PX;
+  border-radius: 50PX;
+}
+.search input{
+  padding: 6PX;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #ffffff;
+  font-size: 18PX;
+  max-width: 200PX;
+
+}
+.search button{
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-size: 18PX;
+  max-width: 200PX;
+  cursor: pointer;
+}
+.search input::placeholder{
+  color: #ffffff;
+}
+.searchbtn{
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 10PX 20PX;
+  width: 300px;
+  border-radius: 5PX;
+}
+.searchbtn input{
+  padding: 6PX;
+  background: black;
+  border: 0;
+  outline: 0;
+  color: #ffffff;
+  font-size: 18PX;
+  max-width: 200PX;
+
+}
+.searchbtn button{
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #000000;
+  font-size: 18PX;
+  max-width: 200PX;
+  cursor: pointer;
+}
+.searchbtn input::placeholder{
+  color: #ffffff;
+}
+.btn3{
+  border: 10px;
+  border-color: #fd1212;
+}
+.navbar2{
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  background: #01011c;
+  padding:  50px;
+  box-sizing: border-box;
+  color: white;
+}

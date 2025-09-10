@@ -1,0 +1,80 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff; 
+}
+.card{
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease;
+  margin-top: 100px;
+
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 300px;
+  height: 300px;   
+  object-fit: cover;
+  border-top-left-radius: 10px;  
+  border-top-right-radius: 10px;
+  position: relative;
+  right: 48.5px;
+  bottom: 11px;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.card button{
+  display: block;
+  justify-items: center;
+  margin-left: 50px;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  color: rgb(23, 60, 12);
+  font-size: 16px;
+  cursor: pointer;
+  transition:  transform  0.3s;
+}
+.card button:hover{
+  transform: scale(1.05);
+}
+
+.btn-animate {
+  background-color: #ffffff; 
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-animate:hover {
+  background-color: #0e4816; 
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.179);
+}
+.btn-animate:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.114);
+}
