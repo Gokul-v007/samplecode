@@ -1,7 +1,8 @@
 import react, {useState} from "react";
 import{Container , Row, Col, ProgressBar, Card, Button,Form} from "react-bootstrap";
 import '../Projectcss/Page.css'
-import { FaAward } from "react-icons/fa";
+import { FaAward ,FaRegFileAlt } from "react-icons/fa";
+import Project1 from './Project1.jsx'
 import { BsSuitcaseLg } from "react-icons/bs";
 import { ArrowLeftOutlined, CalendarOutlined } from "@ant-design/icons";
 
@@ -48,12 +49,13 @@ const [selectedStatus, setSelectedStatus] = useState("");
 
   const [qualifications, setQualifications] = useState([emptyQualification]);
 
-  const handleChange = (index, evt) => {
+  const handleChange = (index, evt ,e) => {
     const { name, value } = evt.target;
     const updated = qualifications.map((q, i) =>
       i === index ? { ...q, [name]: value } : q
     );
     setQualifications(updated);
+    setExperience({ ...experience, [e.target.name]: e.target.value });
   };
 
   const handleAdd = () => {
@@ -110,6 +112,25 @@ const interestOptions = [
 
 
 
+  
+  const [experience, setExperience] = useState({
+    jobTitle: "",
+    company: "",
+    duration: "",
+    description: "",
+  });
+
+  // const handleChange = (e) => {
+  //   setExperience({ ...experience, [e.target.name]: e.target.value });
+  // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Work Experience Submitted:", experience);
+    
+  // };
+
+
   // const prevStep = ()=>{
   //   if(step > 1) setStep(step-1)
   // };
@@ -123,7 +144,7 @@ const interestOptions = [
 };
 
 const prevStep = () => {
-  if (step > 0) 
+  if (step > 1) 
   setStep(step - 1);
 };
 
@@ -189,10 +210,7 @@ const prevStep = () => {
                 )}
                 {step === 1 ? (
                   <>
-                  <div className="step2card"> EDU</div>
-                    <h4>Educational Background</h4>
-                    <p>Add your educational qualification</p>
-                    <p></p>
+                  <Project1/>
                   </>
                 ):(
                   <h4></h4>
@@ -211,10 +229,6 @@ const prevStep = () => {
                             <h4 className="mb-2">Professional Status</h4>
                             <p className="text-muted">Tell us about your experience level</p>
                         </div>
-                        
-                           
-                              
-
                               <Form onSubmit={handleSubmit}>
                                 <Form.Group className="mb-4">
                                   <Form.Label>Professional Status*</Form.Label>
@@ -385,33 +399,32 @@ const prevStep = () => {
                 {step === 4 ? (
                   <>
                     <div className="app-bg min-vh-100 d-flex flex-column">
-                      {/* Step Header */}
                       
-
-                      {/* Main Form */}
                       <div className="container flex-grow-1 d-flex align-items-center justify-content-center py-5">
                         <div
                           className="bg-white shadow rounded-4 p-4 p-md-5 w-100"
                           style={{ maxWidth: 900 }}
                         >
-                          {/* Section Title */}
+                       
                           <div className="text-center mb-4">
                             <div
                               className="d-inline-block mb-3 rounded-circle"
                               style={{
                                 background:"linear-gradient(135deg, #00c853, #2962ff)",
+                                color:"#ffff",
                                 width: 70,
                                 height: 70,
                               }}
                             >
-                              <i
+                              {/* <i
                                 className="bi bi-briefcase"
                                 style={{
                                   fontSize: "2rem",
                                   color: "#fff",
                                   lineHeight: "70px",
                                 }}
-                              ></i>
+                              ></i> */}
+                              <FaRegFileAlt  style={{ color: "white", fontSize: "28px" ,position: "relative", top:"20px" }} />
                             </div>
                             <h4>Skills & Portfolio</h4>
                             <span className="text-muted">Showcase your abilities and work</span>
@@ -527,11 +540,80 @@ const prevStep = () => {
                 )}
                 {step === 5 ? (
                   <>
-                      <div className="icon-container">
-                        <div className="icon">🏢</div>
+                      <div className="workexp-section">
+                        <Container className="workexp-container">
+                        
+                          <div className="icon-container">
+                            <div className="icon">🏢</div>
+                          </div>
+                          <h4 className="workexp-title">Work Experience</h4>
+                          <p className="workexp-subtitle">Detail your professional experience</p>
+                          <Form onSubmit={handleSubmit} className="workexp-form">
+
+
+                            {qualifications.map((q, idx) => (
+                            <div key={idx}> <Form.Group className="mb-3 text-start">
+                              <Form.Label>Job Title</Form.Label>
+                              <Form.Control
+                                type="text"
+                                name="jobTitle"
+                                placeholder="e.g. Software Engineer"
+                                value={q.jobTitle}
+                                // onChange={() => {handleChange()}}
+                                onChange={(e) => handleChange(0, e)}
+                                required
+                              />
+                            </Form.Group>
+
+                            <Form.Group className="mb-3 text-start">
+                              <Form.Label>Company</Form.Label>
+                              <Form.Control
+                                type="text"
+                                name="company"
+                                placeholder="e.g. Google"
+                                value={q.company}
+                                onChange={e => handleChange(idx, e)}
+                                required
+                              />
+                            </Form.Group>
+
+                            <Form.Group className="mb-3 text-start">
+                              <Form.Label>Duration</Form.Label>
+                              <Form.Control
+                                type="text"
+                                name="duration"
+                                placeholder="e.g. Jan 2020 - Dec 2023"
+                                value={q.duration}
+                                onChange={e => handleChange(idx, e)}
+                                required
+                              />
+                            </Form.Group>
+
+                            <Form.Group className="mb-3 text-start">
+                              <Form.Label>Description</Form.Label>
+                              <Form.Control
+                                as="textarea"
+                                rows={3}
+                                name="description"
+                                placeholder="Describe your role and achievements"
+                                value={q.description}
+                                onChange={e => handleChange(idx, e)}
+                              />
+                            </Form.Group>
+                            
+                            </div>
+                            ))}
+                            
+
+
+
+                            <Button type="submit" className="save-btn w-100">
+                              Save Experience
+                            </Button>
+                          </Form>
+                        </Container>
                       </div>
-                      <h5 className="fw-bold">Work Experience</h5>
-                      <p className="text-muted">Detail your professional experience</p>
+
                   </>
                 ):(
                   <h4></h4>
